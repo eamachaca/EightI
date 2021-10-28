@@ -10,4 +10,9 @@ class BookInformation extends Model
     use HasFactory;
 
     protected $fillable = ['book_id', 'copyright_id', 'media_type_id', 'download_count'];
+
+    public function book()
+    {
+        return $this->belongsTo(Book::class);
+    }
 }

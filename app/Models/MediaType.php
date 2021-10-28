@@ -10,4 +10,9 @@ class MediaType extends Model
     use HasFactory;
 
     protected $fillable = ['type'];
+
+    public function books()
+    {
+        return $this->belongsToMany(Book::class, MediaTypeBook::class);
+    }
 }
