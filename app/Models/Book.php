@@ -26,11 +26,6 @@ class Book extends Model
         return $this->belongsToMany(Bookshelf::class, BookshelfBook::class);
     }
 
-    public function copyrights()
-    {
-        return $this->belongsToMany(Copyright::class, CopyrightBook::class);
-    }
-
     public function formats()
     {
         return $this->belongsToMany(Format::class, FormatBook::class)->withPivot('url');//Example to Pivot :D (The only one that I can found)
@@ -39,11 +34,6 @@ class Book extends Model
     public function languages()
     {
         return $this->belongsToMany(Language::class, LanguageBook::class);
-    }
-
-    public function mediaTypes()
-    {
-        return $this->belongsToMany(MediaType::class, MediaTypeBook::class);
     }
 
     public function subjects()

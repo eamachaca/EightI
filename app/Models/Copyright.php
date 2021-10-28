@@ -11,8 +11,8 @@ class Copyright extends Model
 
     protected $fillable = ['copy'];
 
-    public function books()
+    public function bookInformations()
     {
-        return $this->belongsToMany(Book::class, CopyrightBook::class);
+        return $this->hasMany(BookInformation::class);
     }
 }

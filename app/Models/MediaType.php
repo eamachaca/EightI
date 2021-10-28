@@ -11,8 +11,8 @@ class MediaType extends Model
 
     protected $fillable = ['type'];
 
-    public function books()
+    public function bookInformations()
     {
-        return $this->belongsToMany(Book::class, MediaTypeBook::class);
+        return $this->hasMany(BookInformation::class);
     }
 }

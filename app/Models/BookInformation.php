@@ -15,4 +15,14 @@ class BookInformation extends Model
     {
         return $this->belongsTo(Book::class);
     }
+
+    public function copyright()
+    {
+        return $this->belongsTo(Copyright::class);
+    }
+
+    public function mediaType()
+    {
+        return $this->belongsTo(MediaType::class);
+    }
 }
