@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subject extends Model
+class CopyrightBook extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['subject'];
+    protected $fillable = ['book_id', 'copyright_id'];
 }

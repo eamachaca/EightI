@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Format extends Model
 {
     use HasFactory;
-    protected $fillable=['title'];
+
+    protected $fillable = ['name'];
 }
