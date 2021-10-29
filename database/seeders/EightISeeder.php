@@ -21,7 +21,7 @@ class EightISeeder extends Seeder
      */
     public function run()
     {
-        for ($page = 1; $page < 2; $page++) {
+        for ($page = 1; $page < config('eight_i.quantity', 20); $page++) {
             $consumer = new GutendexConsumer($page);
             foreach ($consumer->getResults() as $result) {
                 try {
