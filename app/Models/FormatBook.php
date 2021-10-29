@@ -9,5 +9,5 @@ class FormatBook extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['book_id', 'format_id'];
+    protected $fillable = ['book_id', 'format_id', 'url'];
 }
